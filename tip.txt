@@ -1,0 +1,26 @@
+ref
+作用：1.把基本类型的数据包装编程响应式的引用类型的数据。
+     2.获取DOM元素： 在Vue3.x中我们也可以通过ref函数来获取元素
+reative
+含义：将「引用类型」数据转换为「响应式」数据，即，把值类型的数据包装编程响应式的引用类型的数据
+
+import { ref, onMounted,nextTick } from 'vue'
+
+const increment = async()=>{    
+    count.value++;
+    // DOM 还未更新
+    console.log(document.getElementById('counter').textContent) // 0
+    await nextTick()
+    // DOM 此时已经更新
+    console.log(document.getElementById('counter').textContent) // 1
+}
+
+v-pre#   <span v-pre>{{ this will not be compiled }}</span>
+跳过该元素及其所有子元素的编译
+v-cloak#
+用于隐藏尚未完成编译的 DOM 模板 
+
+// setup的作用：
+// 1.变量无需进行 return
+// 2.子组件无需手动注册 
+// 3.props 的接收方式变化等（比较多）

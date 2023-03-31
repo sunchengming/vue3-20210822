@@ -1,5 +1,3 @@
-//
-
 <template>
   <div class="seting-box">
     <s-header :name="'账号管理'"></s-header>
